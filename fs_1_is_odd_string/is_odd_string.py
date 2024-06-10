@@ -1,3 +1,5 @@
+alphabet = ('abcdefghijklmnopqrstuvwxyz')
+
 def is_odd_string(word):
     """Is the sum of the character-positions odd?
 
@@ -27,5 +29,9 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
+    total = sum([alphabet.find(char) + 1 for char in word ])
+    if total % 2 == 0:
+        return False
+    else:
+        return True
     # Hint: you may find the ord() function useful here
